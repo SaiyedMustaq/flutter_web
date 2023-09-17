@@ -35,7 +35,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: production-files
-        path: ./build/web/
+        path: ./build/web
   
   deploy:
     name: Deploy
@@ -53,5 +53,5 @@ jobs:
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ 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 }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
         publish_dir: ./build
